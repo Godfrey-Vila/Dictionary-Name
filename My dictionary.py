@@ -17,15 +17,20 @@ while Loop:
     Option = int(input("please choose from the menu: "))
     print("")
     if Option == 1:
-        Name= str(input("Please enter your name (example: Godfrey C. Vila) : ").capitalize())
+        Name= str(input("Please enter your name (example: Godfrey C. Vila) : ").upper())
         Age= int(input("How old are you: "))
         Address = input("Tell me your address: ").capitalize()
         Phone = int(input("please indicate your phone number: #"))
-        contacts = {Name: {"Age": Age, "Address": Address, "Phone": Phone}}
+        contacts = {Name:{"Age": Age, "Address": Address, "Phone": Phone}}
         print("Saved")
-        print(contacts)
+    if Option ==2:
+        print("")
+        Search_Name = str(input("Enter the name you want to search: ").upper())
+        if Search_Name in contacts:
+            print("Contacts", contacts.items())
+
+
     elif Option == 3:
-        print("Exit")
         Loop = False
 
 
