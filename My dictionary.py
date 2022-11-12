@@ -40,6 +40,7 @@ while True:
         else:
             print("Sorry! The name you have entered is not available.")
     elif Option == 3:
+        print("THANKYOU \n\n Exit")
         break
     elif Option > 3:
         print("Must be from 1-3 only")
