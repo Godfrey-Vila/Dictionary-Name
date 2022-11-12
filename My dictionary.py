@@ -36,8 +36,14 @@ while True:
         if Search_Name in contacts:
             for key, values in contacts[Search_Name].items():
                 print(key, values)
+        else:
+            print("Sorry! The name you have entered is not available.")
     elif Option == 3:
         break
+    elif Option > 3:
+        print("Must be from 1-3 only")
+    elif Option < 1:
+        print("Must be from 1-3 only")
 
 
 
