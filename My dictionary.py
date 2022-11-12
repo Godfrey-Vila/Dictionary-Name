@@ -7,9 +7,11 @@ print("")
 contacts = {}
 while True:
     print("********** MENU **********")
+    print("")
     print("1. add an item ")
     print("2. search ")
     print("3. exit ")
+    print("")
     print("**************************")
     print("")
 
@@ -28,8 +30,7 @@ while True:
                     "Phone": Phone,
                     "Symptoms":{"Caught": Symptoms}
                     }
-        print("")
-        print("Saved")
+        print(" Your contacts for medical tracing is Saved!!")
     if Option == 2:
         print("")
         Search_Name = str(input("Enter the name you want to search: ").upper())
