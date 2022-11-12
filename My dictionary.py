@@ -4,9 +4,8 @@ print("******** SECTION BSCOE 2-2 ***********")
 print("******* Sir Danilo Madrigalejos ******")
 print("")
 
-contacts={}
-Loop = True
-while Loop:
+contacts = {}
+while True:
     print("********** MENU **********")
     print("1. add an item ")
     print("2. search ")
@@ -17,23 +16,29 @@ while Loop:
     Option = int(input("please choose from the menu: "))
     print("")
     if Option == 1:
-        Name= str(input("Please enter your name (example: Godfrey C. Vila) : ").upper())
+        Name= str(input("Please enter your name (example: Godfrey Vila) : ").upper())
         Age= int(input("How old are you: "))
         Address = input("Tell me your address: ").upper()
         Phone = int(input("please indicate your phone number: #"))
-        Symptoms = str(input({" Please enter the specific feelings of your self \nFEVER\nCAUGHT\nHARD TO BREATHE"}))
-        contacts[Name] = {"Age": Age, "Address": Address, "Phone": Phone, "Symptoms":{}}
+        Symptoms = str(input("Please enter 'yes' if you have Caught otherwise 'no'" ))
+        contacts[Name] = {
+                    "Name": Name,
+                    "Age": Age,
+                    "Address": Address,
+                    "Phone": Phone,
+                    "Symptoms":{"Caught": Symptoms}
+                    }
         print("")
         print("Saved")
-    if Option ==2:
+    if Option == 2:
         print("")
         Search_Name = str(input("Enter the name you want to search: ").upper())
         if Search_Name in contacts:
-            print("Contacts", contacts)
-
-
+            for key, values in contacts[Search_Name].items():
+                print(key, values)
     elif Option == 3:
-        Loop = False
+        break
+
 
 
 
