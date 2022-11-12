@@ -19,15 +19,17 @@ while Loop:
     if Option == 1:
         Name= str(input("Please enter your name (example: Godfrey C. Vila) : ").upper())
         Age= int(input("How old are you: "))
-        Address = input("Tell me your address: ").capitalize()
+        Address = input("Tell me your address: ").upper()
         Phone = int(input("please indicate your phone number: #"))
-        contacts = {Name:{"Age": Age, "Address": Address, "Phone": Phone}}
+        Symptoms = str(input({" Please enter the specific feelings of your self \nFEVER\nCAUGHT\nHARD TO BREATHE"}))
+        contacts[Name] = {"Age": Age, "Address": Address, "Phone": Phone, "Symptoms":{}}
+        print("")
         print("Saved")
     if Option ==2:
         print("")
         Search_Name = str(input("Enter the name you want to search: ").upper())
         if Search_Name in contacts:
-            print("Contacts", contacts.items())
+            print("Contacts", contacts)
 
 
     elif Option == 3:
